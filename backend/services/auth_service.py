@@ -3,7 +3,8 @@
 """
 from datetime import datetime, timedelta
 from typing import Optional
-from jose import JWTError, jwt
+from jose import jwt
+from jose.exceptions import JWTError
 from passlib.context import CryptContext
 from mysql.connector import Error
 from config import settings
