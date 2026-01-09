@@ -1,0 +1,3220 @@
+{
+  "standardversion" : "https://data.gov.ru/metodicheskie-rekomendacii-po-publikacii-otkrytyh-dannyh-versiya-30",
+  "identifier" : "7705021556-Obektykulturnogonaslediya",
+  "title" : "Объекты культурного наследия",
+  "description" : "Набор данных \"Объекты культурного наследия города Москвы\" содержит информацию об объектах, находящихся в соответствии с Федеральным законом от 25 июня 2002 г. № 73-ФЗ \"Об объектах культурного наследия (памятниках истории и культуры) народов Российской Федерации\" под государственной охраной, а именно: объектах культурного наследия, включенных в единый государственный реестр объектов культурного наследия (памятников истории и культуры) народов Российской Федерации, и выявленных объектах культурного наследия. В каталоге представлена следующая информация: - сведения о наименовании объекта; - сведения о времени возникновения или дате создания объекта, датах основных изменений (перестроек) данного объекта и (или) датах связанных с ним исторических событий; - сведения о местонахождении объекта (адрес объекта или при его отсутствии описание местоположения объекта); - сведения о категории историко-культурного значения объекта; - сведения о виде объекта. На территории города Москвы расположены объекты культурного наследия, включенных в Список всемирного культурного и природного наследия ЮНЕСКО: - Ансамбль Кремля и Красная площадь; - Церковь Вознесения в Коломенском; - Ансамбль Новодевичьего монастыря.",
+  "creator" : "Департамент культурного наследия города Москвы",
+  "created" : "2014-06-17",
+  "modified" : "",
+  "subject" : "памятник, культурное наследие, культура, наследие, наследия, памятники архитектуры, объекты культурного наследия федерального значения, объекты культурного наследия регионального значения",
+  "format" : "JSON",
+  "publisher" : {
+    "name" : "Пархаева Ольга Ивановна",
+    "phone" : "(495) 951-46-42",
+    "mbox" : "ParkhaevaOI@mos.ru"
+  },
+  "data" : [ {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=236076",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=239749",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=237100",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=247827",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=237360",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=247851",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=189719",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=239602",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=245507",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=243548",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=243576",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=290023",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=247154",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=252564",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=254195",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=249328",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=250845",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=238035",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=255554",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=257836",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=262230",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=262342",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=262442",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=262462",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=270529",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=275639",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=279189",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=279205",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=279522",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=289835",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=292786",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=296293",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=305714",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=317546",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=317534",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=306006",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=279213",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=180891",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=306540",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=306548",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=297969",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=311040",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=315441",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=311686",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=311714",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=247900",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=312374",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=315739",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=312658",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=312630",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=312756",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=312820",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=315747",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=315837",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=314474",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=314494",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=314466",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=314678",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=314686",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=322505",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=320003",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=320992",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=321269",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=321357",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=323551",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=328583",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=328599",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=328703",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=331269",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=329096",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=329176",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333073",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333089",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=328743",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=328715",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=328727",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333169",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=331630",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=331666",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=331743",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=331943",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=332063",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=332111",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333541",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333585",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333593",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=332317",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=332441",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333998",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=334442",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=203365",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=183284",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=212352",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=204397",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=189898",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=190014",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=178333",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=178791",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=177941",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=178265",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=204441",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=181157",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=181549",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=218547",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=179437",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=180292",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=183736",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=231941",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=186825",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=192748",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=182737",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=182797",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=186992",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=184080",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=184991",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=185949",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=186367",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=190046",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=190418",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=230162",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=188840",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=192465",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=219104",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=190982",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=189144",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=189270",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=189458",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=193435",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=221018",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=199000",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=199037",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=196845",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=195695",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=195868",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=196466",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=197887",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=198423",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=200232",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=201793",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=201773",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=204479",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=204950",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=207761",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=207749",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=205692",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=207813",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=207582",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=206430",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=208106",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=208122",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=208206",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=208396",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=210554",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=212780",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=213157",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=211997",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=212273",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=213306",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=213400",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=213708",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=214203",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=214698",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=181056",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=181076",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=181132",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=183467",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=222358",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=222462",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=222024",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=225614",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=230188",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=230552",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=218988",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=230853",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=230114",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=230897",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  } ],
+  "structure" : [ ]
+}{
+  "standardversion" : "https://data.gov.ru/metodicheskie-rekomendacii-po-publikacii-otkrytyh-dannyh-versiya-30",
+  "identifier" : "7705021556-Obektykulturnogonaslediya",
+  "title" : "Объекты культурного наследия",
+  "description" : "Набор данных \"Объекты культурного наследия города Москвы\" содержит информацию об объектах, находящихся в соответствии с Федеральным законом от 25 июня 2002 г. № 73-ФЗ \"Об объектах культурного наследия (памятниках истории и культуры) народов Российской Федерации\" под государственной охраной, а именно: объектах культурного наследия, включенных в единый государственный реестр объектов культурного наследия (памятников истории и культуры) народов Российской Федерации, и выявленных объектах культурного наследия. В каталоге представлена следующая информация: - сведения о наименовании объекта; - сведения о времени возникновения или дате создания объекта, датах основных изменений (перестроек) данного объекта и (или) датах связанных с ним исторических событий; - сведения о местонахождении объекта (адрес объекта или при его отсутствии описание местоположения объекта); - сведения о категории историко-культурного значения объекта; - сведения о виде объекта. На территории города Москвы расположены объекты культурного наследия, включенных в Список всемирного культурного и природного наследия ЮНЕСКО: - Ансамбль Кремля и Красная площадь; - Церковь Вознесения в Коломенском; - Ансамбль Новодевичьего монастыря.",
+  "creator" : "Департамент культурного наследия города Москвы",
+  "created" : "2014-06-17",
+  "modified" : "",
+  "subject" : "памятник, культурное наследие, культура, наследие, наследия, памятники архитектуры, объекты культурного наследия федерального значения, объекты культурного наследия регионального значения",
+  "format" : "JSON",
+  "publisher" : {
+    "name" : "Пархаева Ольга Ивановна",
+    "phone" : "(495) 951-46-42",
+    "mbox" : "ParkhaevaOI@mos.ru"
+  },
+  "data" : [ {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=236076",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=239749",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=237100",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=247827",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=237360",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=247851",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=189719",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=239602",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=245507",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=243548",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=243576",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=290023",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=247154",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=252564",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=254195",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=249328",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=250845",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=238035",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=255554",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=257836",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=262230",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=262342",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=262442",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=262462",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=270529",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=275639",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=279189",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=279205",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=279522",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=289835",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=292786",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=296293",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=305714",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=317546",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=317534",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=306006",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=279213",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=180891",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=306540",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=306548",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=297969",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=311040",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=315441",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=311686",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=311714",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=247900",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=312374",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=315739",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=312658",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=312630",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=312756",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=312820",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=315747",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=315837",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=314474",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=314494",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=314466",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=314678",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=314686",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=322505",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=320003",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=320992",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=321269",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=321357",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=323551",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=328583",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=328599",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=328703",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=331269",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=329096",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=329176",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333073",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333089",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=328743",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=328715",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=328727",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333169",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=331630",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=331666",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=331743",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=331943",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=332063",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=332111",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333541",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333585",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333593",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=332317",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=332441",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333998",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=334442",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=203365",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=183284",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=212352",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=204397",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=189898",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=190014",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=178333",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=178791",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=177941",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=178265",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=204441",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=181157",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=181549",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=218547",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=179437",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=180292",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=183736",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=231941",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=186825",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=192748",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=182737",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=182797",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=186992",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=184080",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=184991",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=185949",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=186367",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=190046",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=190418",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=230162",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=188840",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=192465",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=219104",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=190982",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=189144",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=189270",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=189458",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=193435",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=221018",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=199000",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=199037",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=196845",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=195695",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=195868",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=196466",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=197887",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=198423",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=200232",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=201793",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=201773",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=204479",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=204950",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=207761",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=207749",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=205692",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=207813",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=207582",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=206430",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=208106",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=208122",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=208206",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=208396",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=210554",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=212780",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=213157",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=211997",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=212273",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=213306",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=213400",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=213708",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=214203",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=214698",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=181056",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=181076",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=181132",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=183467",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=222358",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=222462",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=222024",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=225614",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=230188",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=230552",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=218988",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=230853",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=230114",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=230897",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  } ],
+  "structure" : [ ]
+}{
+  "standardversion" : "https://data.gov.ru/metodicheskie-rekomendacii-po-publikacii-otkrytyh-dannyh-versiya-30",
+  "identifier" : "7705021556-Obektykulturnogonaslediya",
+  "title" : "Объекты культурного наследия",
+  "description" : "Набор данных \"Объекты культурного наследия города Москвы\" содержит информацию об объектах, находящихся в соответствии с Федеральным законом от 25 июня 2002 г. № 73-ФЗ \"Об объектах культурного наследия (памятниках истории и культуры) народов Российской Федерации\" под государственной охраной, а именно: объектах культурного наследия, включенных в единый государственный реестр объектов культурного наследия (памятников истории и культуры) народов Российской Федерации, и выявленных объектах культурного наследия. В каталоге представлена следующая информация: - сведения о наименовании объекта; - сведения о времени возникновения или дате создания объекта, датах основных изменений (перестроек) данного объекта и (или) датах связанных с ним исторических событий; - сведения о местонахождении объекта (адрес объекта или при его отсутствии описание местоположения объекта); - сведения о категории историко-культурного значения объекта; - сведения о виде объекта. На территории города Москвы расположены объекты культурного наследия, включенных в Список всемирного культурного и природного наследия ЮНЕСКО: - Ансамбль Кремля и Красная площадь; - Церковь Вознесения в Коломенском; - Ансамбль Новодевичьего монастыря.",
+  "creator" : "Департамент культурного наследия города Москвы",
+  "created" : "2014-06-17",
+  "modified" : "",
+  "subject" : "памятник, культурное наследие, культура, наследие, наследия, памятники архитектуры, объекты культурного наследия федерального значения, объекты культурного наследия регионального значения",
+  "format" : "JSON",
+  "publisher" : {
+    "name" : "Пархаева Ольга Ивановна",
+    "phone" : "(495) 951-46-42",
+    "mbox" : "ParkhaevaOI@mos.ru"
+  },
+  "data" : [ {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=236076",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=239749",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=237100",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=247827",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=237360",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=247851",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=189719",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=239602",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=245507",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=243548",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=243576",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=290023",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=247154",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=252564",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=254195",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=249328",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=250845",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=238035",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=255554",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=257836",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=262230",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=262342",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=262442",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=262462",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=270529",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=275639",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=279189",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=279205",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=279522",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=289835",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=292786",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=296293",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=305714",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=317546",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=317534",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=306006",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=279213",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=180891",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=306540",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=306548",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=297969",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=311040",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=315441",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=311686",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=311714",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=247900",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=312374",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=315739",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=312658",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=312630",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=312756",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=312820",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=315747",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=315837",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=314474",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=314494",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=314466",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=314678",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=314686",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=322505",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=320003",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=320992",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=321269",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=321357",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=323551",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=328583",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=328599",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=328703",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=331269",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=329096",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=329176",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333073",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333089",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=328743",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=328715",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=328727",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333169",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=331630",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=331666",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=331743",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=331943",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=332063",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=332111",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333541",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333585",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333593",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=332317",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=332441",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=333998",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=334442",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=203365",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=183284",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=212352",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=204397",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=189898",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=190014",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=178333",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=178791",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=177941",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=178265",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=204441",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=181157",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=181549",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=218547",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=179437",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=180292",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=183736",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=231941",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=186825",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=192748",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=182737",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=182797",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=186992",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=184080",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=184991",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=185949",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=186367",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=190046",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=190418",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=230162",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=188840",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=192465",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=219104",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=190982",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=189144",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=189270",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=189458",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=193435",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=221018",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=199000",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=199037",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=196845",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=195695",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=195868",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=196466",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=197887",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=198423",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=200232",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=201793",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=201773",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=204479",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=204950",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=207761",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=207749",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=205692",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=207813",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=207582",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=206430",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=208106",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=208122",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=208206",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=208396",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=210554",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=212780",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=213157",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=211997",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=212273",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=213306",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=213400",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=213708",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=214203",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=214698",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=181056",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=181076",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=181132",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=183467",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=222358",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=222462",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=222024",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=225614",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=230188",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=230552",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=218988",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=230853",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=230114",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  }, {
+    "source" : "http://data.mos.ru/odata/export/catalog?idFile=230897",
+    "created" : "",
+    "provenance" : "Выпуск релиза",
+    "valid" : "2025-10-24",
+    "structure" : ""
+  } ],
+  "structure" : [ ]
+}
