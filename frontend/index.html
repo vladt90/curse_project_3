@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Культурные маршруты Москвы</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>🏛️ Культурные маршруты Москвы</h1>
+            <nav class="header-nav">
+                <div class="user-info">
+                    <span>👤 <span id="user-name"></span></span>
+                    <button class="btn btn-secondary" id="logout-btn">Выход</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Message -->
+        <div id="message" class="message hidden"></div>
+
+        <div class="main-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h2>Построение маршрута</h2>
+                
+                <div class="form-group">
+                    <label>📍 Точка старта</label>
+                    <small>Кликните на карте или введите координаты</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="start-lat">Широта</label>
+                    <input 
+                        type="number" 
+                        id="start-lat" 
+                        step="0.000001" 
+                        placeholder="55.7539"
+                        readonly
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="start-lon">Долгота</label>
+                    <input 
+                        type="number" 
+                        id="start-lon" 
+                        step="0.000001" 
+                        placeholder="37.6208"
+                        readonly
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="start-address">Адрес (необязательно)</label>
+                    <input 
+                        type="text" 
+                        id="start-address" 
+                        placeholder="Определяется автоматически"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="objects-count">Количество объектов в маршруте</label>
+                    <input 
+                        type="number" 
+                        id="objects-count" 
+                        min="2" 
+                        max="20" 
+                        value="5"
+                    >
+                    <small>От 2 до 20 объектов (максимальный радиус 5 км)</small>
+                </div>
+
+                <button class="btn-build-route" id="build-route-btn">
+                    🗺️ Построить маршрут
+                </button>
+
+                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #ddd;">
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">
+                        <strong>Как пользоваться:</strong><br>
+                        1. Кликните на карте для выбора точки старта<br>
+                        2. Укажите количество объектов<br>
+                        3. Нажмите "Построить маршрут"
+                    </p>
+                </div>
+            </aside>
+
+            <!-- Map -->
+            <main>
+                <div id="map"></div>
+                
+                <!-- Route Results -->
+                <div id="route-results" class="route-results hidden">
+                    <!-- Результаты маршрута будут добавлены динамически -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/api.js"></script>
+    <script src="js/map.js"></script>
+</body>
+</html>
+

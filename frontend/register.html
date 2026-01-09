@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - Культурные маршруты Москвы</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>🏛️ Регистрация</h2>
+        
+        <div id="message" class="message hidden"></div>
+        
+        <form id="register-form">
+            <div class="form-group">
+                <label for="username">Имя пользователя *</label>
+                <input 
+                    type="text" 
+                    id="username" 
+                    required 
+                    minlength="3"
+                    autocomplete="username"
+                    placeholder="Минимум 3 символа"
+                >
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    required 
+                    autocomplete="email"
+                    placeholder="example@mail.ru"
+                >
+            </div>
+            
+            <div class="form-group">
+                <label for="full-name">Полное имя (необязательно)</label>
+                <input 
+                    type="text" 
+                    id="full-name" 
+                    autocomplete="name"
+                    placeholder="Иван Иванов"
+                >
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Пароль *</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    required 
+                    minlength="6"
+                    autocomplete="new-password"
+                    placeholder="Минимум 6 символов"
+                >
+            </div>
+            
+            <div class="form-group">
+                <label for="password-confirm">Подтвердите пароль *</label>
+                <input 
+                    type="password" 
+                    id="password-confirm" 
+                    required 
+                    minlength="6"
+                    autocomplete="new-password"
+                    placeholder="Повторите пароль"
+                >
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.75rem;">
+                Зарегистрироваться
+            </button>
+        </form>
+        
+        <div class="auth-links">
+            <p>Уже есть аккаунт? <a href="login.html">Войти</a></p>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script>
+        document.getElementById('register-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const fullName = document.getElementById('full-name').value || null;
+            const password = document.getElementById('password').value;
+            const passwordConfirm = document.getElementById('password-confirm').value;
+            const messageDiv = document.getElementById('message');
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            
+            // Проверка совпадения паролей
+            if (password !== passwordConfirm) {
+                messageDiv.className = 'message message-error';
+                messageDiv.textContent = 'Пароли не совпадают';
+                messageDiv.classList.remove('hidden');
+                return;
+            }
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Регистрация...';
+            
+            try {
+                await api.register(username, email, password, fullName);
+                
+                // Показываем успешное сообщение и перенаправляем
+                messageDiv.className = 'message message-success';
+                messageDiv.textContent = 'Регистрация успешна! Перенаправление...';
+                messageDiv.classList.remove('hidden');
+                
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 1500);
+            } catch (error) {
+                messageDiv.className = 'message message-error';
+                messageDiv.textContent = error.message;
+                messageDiv.classList.remove('hidden');
+                
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Зарегистрироваться';
+            }
+        });
+        
+        // Если уже авторизован, перенаправляем
+        if (api.isAuthenticated()) {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
+
