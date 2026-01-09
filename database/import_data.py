@@ -81,26 +81,38 @@ def parse_json_data(file_path: str) -> List[Dict]:
     """
     print(f"Загрузка данных из {file_path}...")
     
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-        
-        if isinstance(data, list):
-            print(f"Загружено {len(data)} объектов")
-            return data
-        else:
-            print("Ошибка: JSON файл не содержит массив объектов")
-            return []
+    # Пробуем разные кодировки
+    encodings = ['utf-8', 'utf-8-sig', 'cp1251', 'windows-1251', 'latin-1']
+    
+    for encoding in encodings:
+        try:
+            with open(file_path, 'r', encoding=encoding) as f:
+                data = json.load(f)
             
-    except FileNotFoundError:
-        print(f"Ошибка: Файл {file_path} не найден")
-        return []
-    except json.JSONDecodeError as e:
-        print(f"Ошибка парсинга JSON: {e}")
-        return []
-    except Exception as e:
-        print(f"Неожиданная ошибка: {e}")
-        return []
+            print(f"✓ Файл успешно прочитан (кодировка: {encoding})")
+            
+            if isinstance(data, list):
+                print(f"✓ Загружено {len(data)} объектов")
+                return data
+            else:
+                print("Ошибка: JSON файл не содержит массив объектов")
+                return []
+                
+        except (UnicodeDecodeError, UnicodeError):
+            # Пробуем следующую кодировку
+            continue
+        except FileNotFoundError:
+            print(f"✗ Ошибка: Файл {file_path} не найден")
+            return []
+        except json.JSONDecodeError as e:
+            print(f"✗ Ошибка парсинга JSON: {e}")
+            return []
+        except Exception as e:
+            print(f"✗ Ошибка при чтении с кодировкой {encoding}: {e}")
+            continue
+    
+    print(f"✗ Не удалось прочитать файл ни с одной из кодировок: {encodings}")
+    return []
 
 
 def process_object(obj: Dict) -> Optional[Dict]:
