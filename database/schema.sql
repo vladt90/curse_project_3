@@ -26,15 +26,14 @@ CREATE TABLE heritage_objects (
     security_status VARCHAR(200) COMMENT 'Статус охраны',
     description TEXT COMMENT 'Описание объекта',
     build_year VARCHAR(100) COMMENT 'Год постройки',
-    location POINT NOT NULL SRID 4326 COMMENT 'Координаты объекта (широта, долгота)',
+    location POINT NOT NULL COMMENT 'Координаты объекта (широта, долгота)',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     
-    -- Индексы
-    INDEX idx_district (district),
-    INDEX idx_object_type (object_type),
-    INDEX idx_category (category),
-    SPATIAL INDEX idx_location (location)
+    KEY idx_district (district),
+    KEY idx_object_type (object_type),
+    KEY idx_category (category),
+    SPATIAL KEY idx_location (location)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
 COMMENT='Объекты культурного наследия города Москвы';
 
@@ -52,10 +51,9 @@ CREATE TABLE users (
     last_login TIMESTAMP NULL,
     is_active BOOLEAN DEFAULT TRUE COMMENT 'Активен ли пользователь',
     
-    -- Индексы
-    INDEX idx_email (email),
-    INDEX idx_username (username),
-    INDEX idx_is_active (is_active)
+    KEY idx_email (email),
+    KEY idx_username (username),
+    KEY idx_is_active (is_active)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
 COMMENT='Зарегистрированные пользователи системы';
 
@@ -65,19 +63,17 @@ COMMENT='Зарегистрированные пользователи сист�
 CREATE TABLE routes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL COMMENT 'ID пользователя',
-    start_location POINT NOT NULL SRID 4326 COMMENT 'Точка старта маршрута',
+    start_location POINT NOT NULL COMMENT 'Точка старта маршрута',
     start_address VARCHAR(500) COMMENT 'Адрес точки старта',
     total_distance DECIMAL(10, 2) COMMENT 'Общая длина маршрута в метрах',
     objects_count INT NOT NULL COMMENT 'Количество объектов в маршруте',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT 'Дата и время построения маршрута',
     
-    -- Внешние ключи
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
     
-    -- Индексы
-    INDEX idx_user_id (user_id),
-    INDEX idx_created_at (created_at),
-    SPATIAL INDEX idx_start_location (start_location)
+    KEY idx_user_id (user_id),
+    KEY idx_created_at (created_at),
+    SPATIAL KEY idx_start_location (start_location)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
 COMMENT='Построенные маршруты пользователей';
 
@@ -91,16 +87,13 @@ CREATE TABLE route_objects (
     sequence_number INT NOT NULL COMMENT 'Порядковый номер объекта в маршруте (1, 2, 3...)',
     distance_from_previous DECIMAL(10, 2) COMMENT 'Расстояние от предыдущей точки в метрах',
     
-    -- Внешние ключи
     FOREIGN KEY (route_id) REFERENCES routes(id) ON DELETE CASCADE,
     FOREIGN KEY (object_id) REFERENCES heritage_objects(id) ON DELETE CASCADE,
     
-    -- Индексы
-    INDEX idx_route_id (route_id),
-    INDEX idx_object_id (object_id),
-    INDEX idx_sequence (route_id, sequence_number),
+    KEY idx_route_id (route_id),
+    KEY idx_object_id (object_id),
+    KEY idx_sequence (route_id, sequence_number),
     
-    -- Уникальность: один объект может встречаться в маршруте только один раз
     UNIQUE KEY unique_route_object (route_id, object_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
 COMMENT='Связь маршрутов и объектов наследия';
