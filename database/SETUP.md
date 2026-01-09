@@ -12,7 +12,20 @@ CREATE DATABASE heritage_routes CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
 
 ## Шаг 2: Применение схемы
 
-### Вариант А: Через phpMyAdmin (рекомендуется)
+### Вариант А: Через phpMyAdmin (РЕКОМЕНДУЕТСЯ)
+
+#### Если возникают ошибки с синтаксисом:
+
+Используйте файл `schema_step_by_step.sql` - выполняйте каждый блок по очереди:
+
+1. В phpMyAdmin выберите базу данных `heritage_routes` в левом меню
+2. Перейдите на вкладку **"SQL"**
+3. Откройте файл `schema_step_by_step.sql`
+4. Скопируйте **ШАГ 1** (DROP TABLE...)
+5. Вставьте и нажмите **"Вперёд"** (Go)
+6. Повторите для **ШАГ 2, 3, 4...** и так далее
+
+#### Если ошибок нет:
 
 1. В phpMyAdmin выберите базу данных `heritage_routes` в левом меню
 2. Перейдите на вкладку **"SQL"**
@@ -23,10 +36,10 @@ CREATE DATABASE heritage_routes CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
 ### Вариант Б: Через командную строку
 
 ```bash
-mysql -u root -p heritage_routes < schema.sql
+mysql -u root heritage_routes < schema.sql
 ```
 
-(если пароль не установлен, используйте `-p` без пароля)
+(если пароль установлен, добавьте `-p`)
 
 ## Проверка
 
