@@ -80,20 +80,19 @@
                     <small>От 2 до 20 объектов (максимальный радиус 5 км)</small>
                 </div>
 
-                <button class="btn-build-route" id="build-route-btn">
-                    🗺️ Построить маршрут
-                </button>
-
-                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #ddd;">
-                    <h3 style="margin-bottom: 0.75rem;">Мои маршруты</h3>
-                    <button id="add-favorite-btn" class="btn btn-primary" style="width: 100%; margin-bottom: 0.75rem;">
-                        Добавить текущий маршрут в избранное
+                <div class="action-block">
+                    <button class="btn-build-route" id="build-route-btn">
+                        🗺️ Построить маршрут
                     </button>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-section-title">Мои маршруты</h3>
                     <div id="routes-list" class="route-history"></div>
                 </div>
 
-                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #ddd;">
-                    <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">
+                <div class="sidebar-section">
+                    <p class="sidebar-help">
                         <strong>Как пользоваться:</strong><br>
                         1. Кликните на карте для выбора точки старта<br>
                         2. Укажите количество объектов<br>

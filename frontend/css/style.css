@@ -6,16 +6,20 @@
 }
 
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent-color: #e74c3c;
-    --success-color: #27ae60;
-    --text-color: #333;
-    --bg-color: #f5f5f5;
-    --card-bg: #ffffff;
-    --border-color: #ddd;
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
+    --primary-color: #2f2a24;
+    --secondary-color: #9a3412;
+    --accent-color: #b45309;
+    --success-color: #2f855a;
+    --text-color: #2f2a24;
+    --muted-text-color: #6b5b4b;
+    --bg-color: #f7f2eb;
+    --card-bg: #fffaf3;
+    --card-bg-elevated: #fbf4ea;
+    --border-color: #e6dccf;
+    --input-bg: #fffdf9;
+    --shadow: 0 16px 32px rgba(47, 42, 36, 0.08);
+    --shadow-hover: 0 20px 40px rgba(47, 42, 36, 0.12);
+    --focus-ring: 0 0 0 3px rgba(154, 52, 18, 0.25);
 }
 
 body {
@@ -25,9 +29,17 @@ body {
     line-height: 1.6;
 }
 
+a {
+    color: var(--secondary-color);
+}
+
+a:hover {
+    color: #60a5fa;
+}
+
 /* Header */
 .header {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, #3f2a1d, #5c3b2a);
     color: white;
     padding: 1rem 2rem;
     box-shadow: var(--shadow);
@@ -64,7 +76,7 @@ body {
 .btn {
     padding: 0.5rem 1rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 12px;
     cursor: pointer;
     font-size: 0.9rem;
     transition: all 0.3s ease;
@@ -73,34 +85,34 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--secondary-color);
+    background: linear-gradient(135deg, #9a3412, #b45309);
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: #2980b9;
+    background: linear-gradient(135deg, #b45309, #d97706);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn-secondary {
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
+    background-color: var(--card-bg-elevated);
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
 }
 
 .btn-secondary:hover {
-    background-color: white;
+    background-color: #f2e8db;
     color: var(--primary-color);
 }
 
 .btn-danger {
-    background-color: var(--accent-color);
+    background: linear-gradient(135deg, #ef4444, #dc2626);
     color: white;
 }
 
 .btn-danger:hover {
-    background-color: #c0392b;
+    background: linear-gradient(135deg, #f87171, #ef4444);
 }
 
 /* Main Container */
@@ -122,7 +134,7 @@ body {
 .sidebar {
     background: var(--card-bg);
     padding: 1.5rem;
-    border-radius: 8px;
+    border-radius: 16px;
     box-shadow: var(--shadow);
     height: fit-content;
     position: sticky;
@@ -131,7 +143,7 @@ body {
 
 .sidebar h2 {
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: var(--text-color);
     font-size: 1.3rem;
 }
 
@@ -143,7 +155,7 @@ body {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .form-group input,
@@ -151,31 +163,34 @@ body {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: 10px;
     font-size: 0.95rem;
     transition: border-color 0.3s ease;
+    background: var(--input-bg);
+    color: var(--text-color);
 }
 
 .form-group input:focus,
 .form-group select:focus {
     outline: none;
     border-color: var(--secondary-color);
+    box-shadow: var(--focus-ring);
 }
 
 .form-group small {
     display: block;
     margin-top: 0.3rem;
-    color: #666;
+    color: var(--muted-text-color);
     font-size: 0.85rem;
 }
 
 .btn-build-route {
     width: 100%;
     padding: 1rem;
-    background: linear-gradient(135deg, var(--success-color), #229954);
+    background: linear-gradient(135deg, #2f855a, #276749);
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 12px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -184,11 +199,11 @@ body {
 
 .btn-build-route:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(39, 174, 96, 0.3);
+    box-shadow: 0 6px 12px rgba(47, 133, 90, 0.25);
 }
 
 .btn-build-route:disabled {
-    background: #95a5a6;
+    background: #b8a896;
     cursor: not-allowed;
 }
 
@@ -196,15 +211,16 @@ body {
 #map {
     height: calc(100vh - 200px);
     min-height: 500px;
-    border-radius: 8px;
+    border-radius: 16px;
     box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
 }
 
 /* Route Results */
 .route-results {
     background: var(--card-bg);
     padding: 1.5rem;
-    border-radius: 8px;
+    border-radius: 16px;
     box-shadow: var(--shadow);
     margin-top: 2rem;
 }
@@ -215,8 +231,8 @@ body {
     gap: 1rem;
     margin-bottom: 2rem;
     padding: 1rem;
-    background: var(--bg-color);
-    border-radius: 4px;
+    background: var(--card-bg-elevated);
+    border-radius: 12px;
 }
 
 .info-item {
@@ -225,14 +241,14 @@ body {
 
 .info-item .label {
     font-size: 0.85rem;
-    color: #666;
+    color: var(--muted-text-color);
     margin-bottom: 0.3rem;
 }
 
 .info-item .value {
     font-size: 1.3rem;
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 /* Object Cards */
@@ -244,7 +260,7 @@ body {
 .object-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 14px;
     padding: 1.5rem;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -252,8 +268,8 @@ body {
 
 .object-card:hover {
     box-shadow: var(--shadow-hover);
-    transform: translateX(5px);
-    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+    border-color: rgba(154, 52, 18, 0.3);
 }
 
 .object-card-header {
@@ -264,7 +280,7 @@ body {
 }
 
 .object-number {
-    background: var(--secondary-color);
+    background: linear-gradient(135deg, #9a3412, #b45309);
     color: white;
     width: 35px;
     height: 35px;
@@ -284,28 +300,28 @@ body {
 .object-name {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--text-color);
     margin-bottom: 0.5rem;
 }
 
 .object-address {
-    color: #666;
+    color: var(--muted-text-color);
     font-size: 0.9rem;
     margin-bottom: 0.3rem;
 }
 
 .object-type {
     display: inline-block;
-    background: var(--bg-color);
+    background: rgba(180, 83, 9, 0.15);
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
     font-size: 0.85rem;
-    color: var(--primary-color);
+    color: #b45309;
     margin-top: 0.5rem;
 }
 
 .object-distance {
-    color: var(--accent-color);
+    color: #b45309;
     font-weight: 600;
     font-size: 0.9rem;
     margin-top: 0.5rem;
@@ -335,26 +351,28 @@ body {
 /* Messages */
 .message {
     padding: 1rem;
-    border-radius: 4px;
+    border-radius: 10px;
     margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 500;
 }
 
 .message-error {
-    background: #fee;
-    color: var(--accent-color);
-    border: 1px solid var(--accent-color);
+    background: rgba(239, 68, 68, 0.1);
+    color: #b91c1c;
+    border: 1px solid rgba(239, 68, 68, 0.3);
 }
 
 .message-success {
-    background: #efe;
-    color: var(--success-color);
-    border: 1px solid var(--success-color);
+    background: rgba(47, 133, 90, 0.12);
+    color: #166534;
+    border: 1px solid rgba(47, 133, 90, 0.3);
 }
 
 .message-info {
-    background: #eef;
-    color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
+    background: rgba(180, 83, 9, 0.12);
+    color: #92400e;
+    border: 1px solid rgba(180, 83, 9, 0.3);
 }
 
 /* Auth Pages */
@@ -363,19 +381,72 @@ body {
     margin: 4rem auto;
     padding: 2rem;
     background: var(--card-bg);
-    border-radius: 8px;
+    border-radius: 16px;
     box-shadow: var(--shadow);
 }
 
 .auth-container h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .auth-links {
     text-align: center;
     margin-top: 1.5rem;
+}
+
+/* Sidebar sections */
+.action-block {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.sidebar-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.sidebar-section-title {
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+    font-size: 1.05rem;
+}
+
+.sidebar-help {
+    font-size: 0.9rem;
+    color: var(--muted-text-color);
+    line-height: 1.6;
+}
+
+/* Route history */
+.route-history {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.route-history-item {
+    background: var(--card-bg-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 0.9rem 1rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.route-history-item:hover {
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(154, 52, 18, 0.3);
+}
+
+.route-fav-btn {
+    border: none;
+    background: transparent;
+    color: #d97706;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 .auth-links a {

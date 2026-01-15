@@ -190,7 +190,7 @@ function displayRouteInfo(route) {
     const resultsDiv = document.getElementById('route-results');
     const routeId = route.route_id;
     const isFavorite = routeId ? favoriteRouteIds.has(routeId) : false;
-    updateAddFavoriteButton();
+    // Кнопка в боковой панели была удалена — обновлять нечего.
 
     const html = `
         <div class="route-info">
@@ -229,7 +229,6 @@ function displayRouteInfo(route) {
                 const nextValue = !favoriteRouteIds.has(routeId);
                 await api.setRouteFavorite(routeId, nextValue);
                 await loadRouteHistory();
-                updateAddFavoriteButton();
                 favoriteButton.textContent = nextValue ? 'Убрать из избранного' : 'Добавить в избранное';
                 showMessage(nextValue ? 'Маршрут добавлен в избранное' : 'Маршрут удален из избранного', 'success');
             } catch (error) {
@@ -372,26 +371,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Обработчик формы
     document.getElementById('build-route-btn').addEventListener('click', buildRoute);
 
-    // Кнопка добавления в избранное
-    const addFavoriteButton = document.getElementById('add-favorite-btn');
-    if (addFavoriteButton) {
-        addFavoriteButton.addEventListener('click', async () => {
-            if (!currentRoute?.route_id) {
-                showMessage('Сначала постройте маршрут', 'error');
-                return;
-            }
-            try {
-                const routeId = currentRoute.route_id;
-                const nextValue = !favoriteRouteIds.has(routeId);
-                await api.setRouteFavorite(routeId, nextValue);
-                await loadRouteHistory();
-                updateAddFavoriteButton();
-                showMessage(nextValue ? 'Маршрут добавлен в избранное' : 'Маршрут удален из избранного', 'success');
-            } catch (error) {
-                showMessage(error.message, 'error');
-            }
-        });
-    }
 
     // Отображение пользователя
     if (api.user) {
@@ -493,7 +472,6 @@ async function openSavedRoute(routeId) {
         const route = await api.getRoute(routeId);
         currentRoute = route;
         await displayRoute(route);
-        updateAddFavoriteButton();
         showMessage('Маршрут загружен', 'success');
     } catch (error) {
         showMessage(error.message, 'error');
@@ -502,18 +480,4 @@ async function openSavedRoute(routeId) {
     }
 }
 
-function updateAddFavoriteButton() {
-    const addFavoriteButton = document.getElementById('add-favorite-btn');
-    if (!addFavoriteButton) return;
-
-    if (!currentRoute?.route_id) {
-        addFavoriteButton.disabled = true;
-        addFavoriteButton.textContent = 'Добавить текущий маршрут в избранное';
-        return;
-    }
-
-    addFavoriteButton.disabled = false;
-    addFavoriteButton.textContent = favoriteRouteIds.has(currentRoute.route_id)
-        ? 'Убрать текущий маршрут из избранного'
-        : 'Добавить текущий маршрут в избранное';
-}
+// updateAddFavoriteButton удален (кнопка в боковой панели убрана)
