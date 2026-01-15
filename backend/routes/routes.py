@@ -2,14 +2,15 @@
 API эндпоинты для работы с маршрутами
 """
 from fastapi import APIRouter, HTTPException, status, Depends
+from mysql.connector import Error
 from typing import List
 from datetime import datetime
 from models import (
     RouteRequest, RouteResponse, RouteObject, RouteHistory,
-    RouteHistoryList, LocationPoint, HeritageObject
+    RouteHistoryList, LocationPoint, HeritageObject, MessageResponse
 )
 from services.route_service import (
-    build_route, get_user_routes, get_route_details
+    build_route, get_user_routes, get_route_details, set_route_favorite
 )
 from routes.auth import get_current_user
 
@@ -111,6 +112,7 @@ async def get_routes(current_user: dict = Depends(get_current_user)):
             start_address=route.get('start_address'),
             total_distance=route['total_distance'],
             objects_count=route['objects_count'],
+            is_favorite=bool(route.get('is_favorite', False)),
             created_at=route['created_at'],
             start_latitude=route['start_latitude'],
             start_longitude=route['start_longitude']
@@ -184,4 +186,29 @@ async def get_route(
         objects=route_objects,
         created_at=route_data['created_at']
     )
+
+
+@router.patch("/routes/{route_id}/favorite", response_model=MessageResponse)
+async def update_route_favorite(
+    route_id: int,
+    is_favorite: bool,
+    current_user: dict = Depends(get_current_user)
+):
+    """
+    Установить/снять избранный статус маршрута
+    """
+    user_id = current_user['id']
+    try:
+        updated = set_route_favorite(user_id, route_id, is_favorite)
+    except Error as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Ошибка обновления избранного: {e}"
+        ) from e
+    if not updated:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Маршрут не найден или у вас нет прав доступа"
+        )
+    return MessageResponse(message="Статус маршрута обновлен")
 

@@ -306,6 +306,7 @@ def get_user_routes(user_id: int, limit: int = 50) -> List[Dict]:
                     start_address,
                     total_distance,
                     objects_count,
+                    is_favorite,
                     created_at
                 FROM routes
                 WHERE user_id = %s
@@ -346,6 +347,7 @@ def get_route_details(route_id: int, user_id: int) -> Optional[Dict]:
                     start_address,
                     total_distance,
                     objects_count,
+                    is_favorite,
                     created_at
                 FROM routes
                 WHERE id = %s AND user_id = %s
@@ -394,4 +396,24 @@ def get_route_details(route_id: int, user_id: int) -> Optional[Dict]:
     except Error as e:
         print(f"Ошибка получения деталей маршрута: {e}")
         return None
+
+
+def set_route_favorite(user_id: int, route_id: int, is_favorite: bool) -> bool:
+    """
+    Установить избранный статус маршрута
+    """
+    try:
+        with get_db_cursor(dictionary=False) as cursor:
+            cursor.execute(
+                """
+                UPDATE routes
+                SET is_favorite = %s
+                WHERE id = %s AND user_id = %s
+                """,
+                (is_favorite, route_id, user_id)
+            )
+            return cursor.rowcount > 0
+    except Error as e:
+        print(f"Ошибка обновления избранного маршрута: {e}")
+        return False
 

@@ -24,6 +24,11 @@ class Settings(BaseSettings):
     APP_NAME: str = "Heritage Routes System"
     APP_VERSION: str = "1.0.0"
     DEBUG: bool = True
+    APP_HOST: str = "0.0.0.0"
+    APP_PORT: int = 8001
+
+    # Yandex
+    YANDEX_GEOCODER_API_KEY: str = "fd1a272a-0331-44ed-8ffb-693497615815"
     
     # Route settings
     MAX_ROUTE_OBJECTS: int = 20  # Максимальное количество объектов в маршруте

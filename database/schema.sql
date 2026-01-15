@@ -67,6 +67,7 @@ CREATE TABLE routes (
     start_address VARCHAR(500) COMMENT 'Адрес точки старта',
     total_distance DECIMAL(10, 2) COMMENT 'Общая длина маршрута в метрах',
     objects_count INT NOT NULL COMMENT 'Количество объектов в маршруте',
+    is_favorite BOOLEAN DEFAULT FALSE COMMENT 'Избранный маршрут',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT 'Дата и время построения маршрута',
     
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,

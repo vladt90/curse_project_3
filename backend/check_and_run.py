@@ -3,6 +3,12 @@
 """
 import sys
 import subprocess
+import io
+
+# Настройка кодировки для Windows
+if sys.platform == 'win32':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 
 print("="*60)
 print("Проверка установленных пакетов")
@@ -16,7 +22,6 @@ required_packages = [
     'pydantic_settings',
     'jose',
     'passlib',
-    'bcrypt',
 ]
 
 missing = []
@@ -29,22 +34,22 @@ for package in required_packages:
             __import__('pydantic_settings')
         else:
             __import__(package)
-        print(f"✓ {package}")
+        print(f"OK {package}")
     except ImportError:
-        print(f"✗ {package} - НЕ УСТАНОВЛЕН")
+        print(f"ERROR {package} - НЕ УСТАНОВЛЕН")
         missing.append(package)
 
 print("="*60)
 
 if missing:
-    print(f"\n❌ Не хватает пакетов: {', '.join(missing)}")
+    print(f"\nERROR Не хватает пакетов: {', '.join(missing)}")
     print("\nУстановите зависимости командой:")
     print("   pip install -r requirements.txt")
     print("\nИЛИ если пакеты установлены в другом окружении Python:")
     print("   python -m pip install -r requirements.txt")
     sys.exit(1)
 else:
-    print("\n✅ Все пакеты установлены!")
+    print("\nOK Все пакеты установлены!")
     print("\nЗапуск сервера...")
     print("="*60)
     
@@ -52,7 +57,7 @@ else:
     try:
         import main
     except Exception as e:
-        print(f"\n❌ Ошибка запуска: {e}")
+        print(f"\nERROR Ошибка запуска: {e}")
         import traceback
         traceback.print_exc()
         sys.exit(1)

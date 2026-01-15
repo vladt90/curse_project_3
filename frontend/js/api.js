@@ -2,7 +2,7 @@
  * API клиент для взаимодействия с backend
  */
 
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = 'http://127.0.0.1:8001/api';
 
 class APIClient {
     constructor() {
@@ -186,6 +186,15 @@ class APIClient {
      */
     async getRoute(id) {
         return await this.request(`/routes/${id}`);
+    }
+
+    /**
+     * Установить избранный статус маршрута
+     */
+    async setRouteFavorite(id, isFavorite) {
+        return await this.request(`/routes/${id}/favorite?is_favorite=${isFavorite}`, {
+            method: 'PATCH',
+        });
     }
 
     /**

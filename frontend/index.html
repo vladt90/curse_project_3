@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Культурные маршруты Москвы</title>
     
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -88,6 +85,14 @@
                 </button>
 
                 <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #ddd;">
+                    <h3 style="margin-bottom: 0.75rem;">Мои маршруты</h3>
+                    <button id="add-favorite-btn" class="btn btn-primary" style="width: 100%; margin-bottom: 0.75rem;">
+                        Добавить текущий маршрут в избранное
+                    </button>
+                    <div id="routes-list" class="route-history"></div>
+                </div>
+
+                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #ddd;">
                     <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">
                         <strong>Как пользоваться:</strong><br>
                         1. Кликните на карте для выбора точки старта<br>
@@ -109,9 +114,9 @@
         </div>
     </div>
 
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    
+    <!-- Yandex Maps JS API -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=fd1a272a-0331-44ed-8ffb-693497615815&lang=ru_RU"></script>
+
     <!-- Custom JS -->
     <script src="js/api.js"></script>
     <script src="js/map.js"></script>

@@ -28,9 +28,9 @@ def init_connection_pool():
             charset='utf8mb4',
             autocommit=False
         )
-        print("✓ Пул соединений с MySQL создан")
+        print("OK Пул соединений с MySQL создан")
     except Error as e:
-        print(f"✗ Ошибка создания пула соединений: {e}")
+        print(f"ERROR Ошибка создания пула соединений: {e}")
         raise
 
 

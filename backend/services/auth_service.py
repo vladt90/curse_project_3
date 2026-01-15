@@ -12,7 +12,8 @@ from database import get_db_cursor
 
 
 # Контекст для хэширования паролей
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+# Используем pbkdf2_sha256, чтобы избежать проблем совместимости bcrypt в Python 3.13
+pwd_context = CryptContext(schemes=["pbkdf2_sha256"], deprecated="auto")
 
 
 def hash_password(password: str) -> str:

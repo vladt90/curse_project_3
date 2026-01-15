@@ -1,96 +1,82 @@
 /**
- * Управление картой и построением маршрутов
+ * Управление картой и построением маршрутов (Яндекс.Карты)
  */
+
+const MOSCOW_CENTER = [55.7539, 37.6208]; // [lat, lon]
 
 let map = null;
 let startMarker = null;
-let routeLayer = null;
-let markersLayer = null;
+let routeLine = null;
+let routeMultiRoute = null;
+let markers = [];
 let currentRoute = null;
+let currentStart = null;
+let favoriteRouteIds = new Set();
 
 /**
  * Инициализация карты
  */
 function initMap() {
-    // Создаем карту с центром на Москве
-    map = L.map('map').setView([55.7539, 37.6208], 11);
-
-    // Добавляем тайлы OpenStreetMap
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors',
-        maxZoom: 18,
-    }).addTo(map);
-
-    // Слои для маршрута и маркеров
-    routeLayer = L.layerGroup().addTo(map);
-    markersLayer = L.layerGroup().addTo(map);
+    map = new ymaps.Map('map', {
+        center: MOSCOW_CENTER,
+        zoom: 11,
+        controls: ['zoomControl']
+    });
 
     // Обработчик клика по карте
-    map.on('click', onMapClick);
-
-    console.log('Карта инициализирована');
+    map.events.add('click', onMapClick);
 }
 
 /**
  * Обработчик клика по карте
  */
 function onMapClick(e) {
-    const { lat, lng } = e.latlng;
-    
+    const coords = e.get('coords'); // [lat, lon]
+    const lat = coords?.[0];
+    const lon = coords?.[1];
+
+    if (!Number.isFinite(lat) || !Number.isFinite(lon)) {
+        showMessage('Не удалось определить координаты точки', 'error');
+        return;
+    }
+
     // Устанавливаем маркер начальной точки
-    setStartPoint(lat, lng);
-    
+    setStartPoint(lat, lon);
+    currentStart = { lat, lng: lon };
+
     // Обновляем координаты в форме
     document.getElementById('start-lat').value = lat.toFixed(6);
-    document.getElementById('start-lon').value = lng.toFixed(6);
-    
+    document.getElementById('start-lon').value = lon.toFixed(6);
+
     // Получаем адрес (обратное геокодирование)
-    reverseGeocode(lat, lng);
+    reverseGeocode(lat, lon);
 }
 
 /**
  * Установить точку старта
  */
-function setStartPoint(lat, lng) {
-    // Удаляем предыдущий маркер
+function setStartPoint(lat, lon) {
     if (startMarker) {
-        map.removeLayer(startMarker);
+        map.geoObjects.remove(startMarker);
     }
 
-    // Создаем новый маркер
-    const icon = L.icon({
-        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-        iconSize: [25, 41],
-        iconAnchor: [12, 41],
-        popupAnchor: [1, -34],
-        shadowSize: [41, 41]
+    startMarker = new ymaps.Placemark([lat, lon], {
+        balloonContent: '<b>Точка старта</b>'
+    }, {
+        preset: 'islands#greenIcon'
     });
 
-    startMarker = L.marker([lat, lng], { icon: icon })
-        .addTo(map)
-        .bindPopup('<b>Точка старта</b>')
-        .openPopup();
+    map.geoObjects.add(startMarker);
 }
 
 /**
- * Обратное геокодирование (получение адреса по координатам)
+ * Обратное геокодирование (Яндекс)
  */
-async function reverseGeocode(lat, lng) {
+async function reverseGeocode(lat, lon) {
     try {
-        const response = await fetch(
-            `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=18&addressdetails=1`,
-            {
-                headers: {
-                    'Accept-Language': 'ru'
-                }
-            }
-        );
-        
-        const data = await response.json();
-        
-        if (data.display_name) {
-            document.getElementById('start-address').value = data.display_name;
+        const data = await api.request(`/geocode/reverse?lat=${lat}&lon=${lon}`);
+        if (data?.address) {
+            document.getElementById('start-address').value = data.address;
         }
     } catch (error) {
         console.error('Ошибка геокодирования:', error);
@@ -101,13 +87,18 @@ async function reverseGeocode(lat, lng) {
  * Построить маршрут
  */
 async function buildRoute() {
-    const lat = parseFloat(document.getElementById('start-lat').value);
-    const lng = parseFloat(document.getElementById('start-lon').value);
+    let lat = parseFloat(document.getElementById('start-lat').value);
+    let lon = parseFloat(document.getElementById('start-lon').value);
     const objectsCount = parseInt(document.getElementById('objects-count').value);
     const startAddress = document.getElementById('start-address').value;
 
     // Валидация
-    if (!lat || !lng) {
+    if ((!Number.isFinite(lat) || !Number.isFinite(lon)) && currentStart) {
+        lat = currentStart.lat;
+        lon = currentStart.lng;
+    }
+
+    if (!Number.isFinite(lat) || !Number.isFinite(lon)) {
         showMessage('Пожалуйста, выберите точку старта на карте', 'error');
         return;
     }
@@ -124,13 +115,14 @@ async function buildRoute() {
     try {
         // Отправляем запрос на построение маршрута
         const route = await api.buildRoute(
-            { latitude: lat, longitude: lng },
+            { latitude: lat, longitude: lon },
             objectsCount,
             startAddress
         );
 
         currentRoute = route;
-        displayRoute(route);
+        await displayRoute(route);
+        await loadRouteHistory();
         showMessage('Маршрут успешно построен!', 'success');
     } catch (error) {
         showMessage(error.message, 'error');
@@ -142,15 +134,20 @@ async function buildRoute() {
 /**
  * Отобразить маршрут на карте
  */
-function displayRoute(route) {
+async function displayRoute(route) {
     // Очищаем предыдущий маршрут
     clearRoute();
 
-    const objects = route.objects;
+    const objects = [...route.objects].sort((a, b) => {
+        if (Number.isFinite(a.sequence_number) && Number.isFinite(b.sequence_number)) {
+            return a.sequence_number - b.sequence_number;
+        }
+        return 0;
+    });
     const startLat = route.start_location.latitude;
     const startLon = route.start_location.longitude;
 
-    // Массив координат для линии маршрута
+    // Массив координат для линии маршрута [lat, lon]
     const routeCoords = [[startLat, startLon]];
 
     // Добавляем маркеры объектов
@@ -159,34 +156,28 @@ function displayRoute(route) {
         const coords = [obj.latitude, obj.longitude];
         routeCoords.push(coords);
 
-        // Создаем маркер
-        const marker = L.marker(coords)
-            .addTo(markersLayer)
-            .bindPopup(`
+        const marker = new ymaps.Placemark(coords, {
+            balloonContent: `
                 <div style="min-width: 200px;">
                     <b>${index + 1}. ${obj.name}</b><br>
                     <small>${obj.address}</small><br>
                     ${obj.object_type ? `<span style="color: #3498db;">${obj.object_type}</span><br>` : ''}
                     ${item.distance_from_previous ? `<span style="color: #e74c3c;">📍 ${formatDistance(item.distance_from_previous)}</span>` : ''}
                 </div>
-            `);
+            `
+        }, {
+            preset: 'islands#blueIcon'
+        });
 
-        // Обработчик клика на маркер
-        marker.on('click', () => {
+        marker.events.add('click', () => {
             highlightObject(index);
         });
+
+        map.geoObjects.add(marker);
+        markers.push(marker);
     });
 
-    // Рисуем линию маршрута
-    const polyline = L.polyline(routeCoords, {
-        color: '#3498db',
-        weight: 3,
-        opacity: 0.7,
-        dashArray: '10, 5'
-    }).addTo(routeLayer);
-
-    // Центрируем карту на маршруте
-    map.fitBounds(polyline.getBounds(), { padding: [50, 50] });
+    drawStraightRoute(routeCoords);
 
     // Отображаем информацию о маршруте
     displayRouteInfo(route);
@@ -197,7 +188,10 @@ function displayRoute(route) {
  */
 function displayRouteInfo(route) {
     const resultsDiv = document.getElementById('route-results');
-    
+    const routeId = route.route_id;
+    const isFavorite = routeId ? favoriteRouteIds.has(routeId) : false;
+    updateAddFavoriteButton();
+
     const html = `
         <div class="route-info">
             <div class="info-item">
@@ -213,6 +207,11 @@ function displayRouteInfo(route) {
                 <div class="value">${new Date(route.created_at).toLocaleString('ru-RU')}</div>
             </div>
         </div>
+        <div style="margin: 0.75rem 0;">
+            <button id="toggle-favorite-btn" class="btn btn-primary">
+                ${isFavorite ? 'Убрать из избранного' : 'Добавить в избранное'}
+            </button>
+        </div>
 
         <h3 style="margin-bottom: 1rem;">Маршрут</h3>
         <div class="objects-list">
@@ -222,6 +221,22 @@ function displayRouteInfo(route) {
 
     resultsDiv.innerHTML = html;
     resultsDiv.classList.remove('hidden');
+
+    const favoriteButton = document.getElementById('toggle-favorite-btn');
+    if (favoriteButton && routeId) {
+        favoriteButton.addEventListener('click', async () => {
+            try {
+                const nextValue = !favoriteRouteIds.has(routeId);
+                await api.setRouteFavorite(routeId, nextValue);
+                await loadRouteHistory();
+                updateAddFavoriteButton();
+                favoriteButton.textContent = nextValue ? 'Убрать из избранного' : 'Добавить в избранное';
+                showMessage(nextValue ? 'Маршрут добавлен в избранное' : 'Маршрут удален из избранного', 'success');
+            } catch (error) {
+                showMessage(error.message, 'error');
+            }
+        });
+    }
 }
 
 /**
@@ -229,7 +244,7 @@ function displayRouteInfo(route) {
  */
 function renderObjectCard(item, index) {
     const obj = item.object;
-    
+
     return `
         <div class="object-card" data-index="${index}" onclick="focusOnObject(${index})">
             <div class="object-card-header">
@@ -252,9 +267,9 @@ function renderObjectCard(item, index) {
  */
 function focusOnObject(index) {
     if (!currentRoute) return;
-    
+
     const obj = currentRoute.objects[index].object;
-    map.setView([obj.latitude, obj.longitude], 16);
+    map.setCenter([obj.latitude, obj.longitude], 16);
     highlightObject(index);
 }
 
@@ -266,7 +281,7 @@ function highlightObject(index) {
     document.querySelectorAll('.object-card').forEach(card => {
         card.style.borderColor = '#ddd';
     });
-    
+
     // Подсвечиваем выбранную
     const card = document.querySelector(`[data-index="${index}"]`);
     if (card) {
@@ -279,15 +294,29 @@ function highlightObject(index) {
  * Очистить маршрут
  */
 function clearRoute() {
-    if (routeLayer) {
-        routeLayer.clearLayers();
+    if (routeLine) {
+        map.geoObjects.remove(routeLine);
+        routeLine = null;
     }
-    if (markersLayer) {
-        markersLayer.clearLayers();
-    }
-    
+    markers.forEach(marker => map.geoObjects.remove(marker));
+    markers = [];
+
     document.getElementById('route-results').classList.add('hidden');
     currentRoute = null;
+}
+
+function drawStraightRoute(routeCoords) {
+    routeLine = new ymaps.Polyline(routeCoords, {}, {
+        strokeColor: '#3498db',
+        strokeWidth: 3,
+        strokeOpacity: 0.7,
+        strokeStyle: 'shortdash'
+    });
+    map.geoObjects.add(routeLine);
+    const bounds = routeLine.geometry.getBounds();
+    if (bounds) {
+        map.setBounds(bounds, { checkZoomRange: true, zoomMargin: 50 });
+    }
 }
 
 /**
@@ -309,7 +338,7 @@ function showMessage(text, type = 'info') {
     messageDiv.className = `message message-${type}`;
     messageDiv.textContent = text;
     messageDiv.classList.remove('hidden');
-    
+
     setTimeout(() => {
         messageDiv.classList.add('hidden');
     }, 5000);
@@ -335,10 +364,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Инициализация карты
-    initMap();
+    ymaps.ready(initMap);
+
+    // История маршрутов
+    loadRouteHistory();
 
     // Обработчик формы
     document.getElementById('build-route-btn').addEventListener('click', buildRoute);
+
+    // Кнопка добавления в избранное
+    const addFavoriteButton = document.getElementById('add-favorite-btn');
+    if (addFavoriteButton) {
+        addFavoriteButton.addEventListener('click', async () => {
+            if (!currentRoute?.route_id) {
+                showMessage('Сначала постройте маршрут', 'error');
+                return;
+            }
+            try {
+                const routeId = currentRoute.route_id;
+                const nextValue = !favoriteRouteIds.has(routeId);
+                await api.setRouteFavorite(routeId, nextValue);
+                await loadRouteHistory();
+                updateAddFavoriteButton();
+                showMessage(nextValue ? 'Маршрут добавлен в избранное' : 'Маршрут удален из избранного', 'success');
+            } catch (error) {
+                showMessage(error.message, 'error');
+            }
+        });
+    }
 
     // Отображение пользователя
     if (api.user) {
@@ -351,3 +404,116 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+/**
+ * Загрузить историю маршрутов пользователя
+ */
+async function loadRouteHistory() {
+    const list = document.getElementById('routes-list');
+    if (!list) return;
+
+    try {
+        const data = await api.getRoutes();
+        renderRouteHistory(data?.routes || []);
+    } catch (error) {
+        console.error('Ошибка загрузки истории маршрутов:', error);
+        list.innerHTML = '<div style="color:#666;">Не удалось загрузить историю</div>';
+    }
+}
+
+/**
+ * Отрисовать историю маршрутов
+ */
+function renderRouteHistory(routes) {
+    const list = document.getElementById('routes-list');
+    if (!list) return;
+
+    favoriteRouteIds = new Set(routes.filter(route => route.is_favorite).map(route => route.id));
+    const favorites = routes.filter(route => route.is_favorite);
+
+    if (!favorites.length) {
+        list.innerHTML = '<div style="color:#666;">Избранных маршрутов пока нет</div>';
+        return;
+    }
+
+    const html = favorites.map(route => `
+        <div class="route-history-item" data-route-id="${route.id}">
+            <div style="display:flex; align-items:center; justify-content:space-between;">
+                <strong>Маршрут #${route.id}</strong>
+                <button class="route-fav-btn" title="Убрать из избранного">★</button>
+            </div>
+            <div style="font-size: 0.9rem; color: #666;">
+                ${route.start_address || 'Адрес не указан'}
+            </div>
+            <div style="font-size: 0.85rem; color: #888;">
+                Объектов: ${route.objects_count} · ${formatDistance(route.total_distance)}
+            </div>
+            <div style="font-size: 0.85rem; color: #888;">
+                ${new Date(route.created_at).toLocaleString('ru-RU')}
+            </div>
+        </div>
+    `).join('');
+
+    list.innerHTML = html;
+
+    list.querySelectorAll('.route-history-item').forEach(item => {
+        item.addEventListener('click', async (event) => {
+            if (event.target?.classList?.contains('route-fav-btn')) {
+                return;
+            }
+            const routeId = item.getAttribute('data-route-id');
+            await openSavedRoute(routeId);
+        });
+    });
+
+    list.querySelectorAll('.route-fav-btn').forEach(button => {
+        button.addEventListener('click', async (event) => {
+            event.stopPropagation();
+            const routeId = event.target.closest('.route-history-item')?.getAttribute('data-route-id');
+            if (!routeId) return;
+            try {
+                await api.setRouteFavorite(routeId, false);
+                await loadRouteHistory();
+                showMessage('Маршрут удален из избранного', 'success');
+            } catch (error) {
+                showMessage(error.message, 'error');
+            }
+        });
+    });
+}
+
+/**
+ * Открыть сохраненный маршрут
+ */
+async function openSavedRoute(routeId) {
+    if (!routeId) return;
+    showLoading(true);
+    clearRoute();
+
+    try {
+        const route = await api.getRoute(routeId);
+        currentRoute = route;
+        await displayRoute(route);
+        updateAddFavoriteButton();
+        showMessage('Маршрут загружен', 'success');
+    } catch (error) {
+        showMessage(error.message, 'error');
+    } finally {
+        showLoading(false);
+    }
+}
+
+function updateAddFavoriteButton() {
+    const addFavoriteButton = document.getElementById('add-favorite-btn');
+    if (!addFavoriteButton) return;
+
+    if (!currentRoute?.route_id) {
+        addFavoriteButton.disabled = true;
+        addFavoriteButton.textContent = 'Добавить текущий маршрут в избранное';
+        return;
+    }
+
+    addFavoriteButton.disabled = false;
+    addFavoriteButton.textContent = favoriteRouteIds.has(currentRoute.route_id)
+        ? 'Убрать текущий маршрут из избранного'
+        : 'Добавить текущий маршрут в избранное';
+}

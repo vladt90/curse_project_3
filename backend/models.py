@@ -135,6 +135,7 @@ class RouteHistory(BaseModel):
     start_address: Optional[str]
     total_distance: float
     objects_count: int
+    is_favorite: bool = False
     created_at: datetime
     start_latitude: float
     start_longitude: float

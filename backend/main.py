@@ -7,7 +7,7 @@ from fastapi.responses import JSONResponse
 from contextlib import asynccontextmanager
 from config import settings
 from database import init_connection_pool, test_connection
-from routes import auth, objects, routes
+from routes import auth, objects, routes, geocode
 
 
 @asynccontextmanager
@@ -17,7 +17,7 @@ async def lifespan(app: FastAPI):
     """
     # Startup
     print("="*60)
-    print(f"🚀 Запуск {settings.APP_NAME} v{settings.APP_VERSION}")
+    print(f"Запуск {settings.APP_NAME} v{settings.APP_VERSION}")
     print("="*60)
     
     try:
@@ -26,24 +26,24 @@ async def lifespan(app: FastAPI):
         
         # Проверка подключения к БД
         if test_connection():
-            print("✓ Подключение к базе данных успешно")
+            print("OK Подключение к базе данных успешно")
         else:
-            print("✗ Ошибка подключения к базе данных")
+            print("ERROR Ошибка подключения к базе данных")
             raise Exception("Не удалось подключиться к БД")
         
-        print(f"✓ Сервер запущен на http://localhost:8000")
-        print(f"✓ Документация API: http://localhost:8000/docs")
+        print(f"OK Сервер запущен на http://localhost:{settings.APP_PORT}")
+        print(f"OK Документация API: http://localhost:{settings.APP_PORT}/docs")
         print("="*60)
         
     except Exception as e:
-        print(f"✗ Ошибка запуска приложения: {e}")
+        print(f"ERROR Ошибка запуска приложения: {e}")
         raise
     
     yield
     
     # Shutdown
     print("\n" + "="*60)
-    print("🛑 Остановка сервера...")
+    print("Остановка сервера...")
     print("="*60)
 
 
@@ -60,7 +60,11 @@ app = FastAPI(
 # Настройка CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # В продакшене указать конкретные домены
+    # Для dev-стенда разрешаем оба origin: localhost и 127.0.0.1
+    allow_origins=[
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -71,6 +75,7 @@ app.add_middleware(
 app.include_router(auth.router)
 app.include_router(objects.router)
 app.include_router(routes.router)
+app.include_router(geocode.router)
 
 
 @app.get("/", tags=["root"])
@@ -130,8 +135,8 @@ if __name__ == "__main__":
     import uvicorn
     uvicorn.run(
         "main:app",
-        host="0.0.0.0",
-        port=8000,
+        host=settings.APP_HOST,
+        port=settings.APP_PORT,
         reload=settings.DEBUG
     )
 
