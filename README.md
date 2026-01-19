@@ -155,11 +155,7 @@ python -m http.server 5500
 
 #### 6. Войдите в систему
 
-Откройте `http://localhost:5500/login.html`
-
-**Тестовые данные:**
-- Логин: `admin`
-- Пароль: `admin123`
+Откройте `http://localhost:5500/login.html` и войдите в созданный вами аккаунт (или зарегистрируйтесь).
 
 ---
 
@@ -334,7 +330,7 @@ LIMIT 10;
 # 1. Вход
 curl -X POST http://localhost:8000/api/login \
   -H "Content-Type: application/json" \
-  -d '{"username":"admin","password":"admin123"}'
+  -d '{"username":"YOUR_USERNAME","password":"YOUR_PASSWORD"}'
 
 # 2. Построение маршрута
 curl -X POST http://localhost:8000/api/route \

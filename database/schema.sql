@@ -9,6 +9,7 @@ USE heritage_routes;
 -- ======================================================
 -- Таблица объектов культурного наследия
 -- ======================================================
+DROP TABLE IF EXISTS object_stories;
 DROP TABLE IF EXISTS route_objects;
 DROP TABLE IF EXISTS routes;
 DROP TABLE IF EXISTS users;
@@ -100,6 +101,19 @@ CREATE TABLE route_objects (
 COMMENT='Связь маршрутов и объектов наследия';
 
 -- ======================================================
+-- Таблица рассказов (ИИ-экскурсовод) - кэш
+-- ======================================================
+CREATE TABLE IF NOT EXISTS object_stories (
+    object_id INT PRIMARY KEY,
+    model VARCHAR(200) NOT NULL,
+    story TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (object_id) REFERENCES heritage_objects(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+COMMENT='Кэш рассказов об объектах (генерация через LLM)';
+
+-- ======================================================
 -- Вспомогательные функции и процедуры
 -- ======================================================
 
@@ -114,11 +128,10 @@ END //
 DELIMITER ;
 
 -- ======================================================
--- Тестовый пользователь (admin/admin123)
+-- Примечание
 -- ======================================================
--- Пароль: admin123 (bcrypt hash)
-INSERT INTO users (username, email, password_hash, full_name) VALUES 
-('admin', 'admin@heritage.ru', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYqNx8bVq5W', 'Администратор системы');
+-- Тестовые учётные данные не добавляются в схему намеренно.
+-- Создайте пользователя через регистрацию (/api/register) или добавьте сид-скрипт локально для dev.
 
 -- ======================================================
 -- Примеры запросов для работы с пространственными данными

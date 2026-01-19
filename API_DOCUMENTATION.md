@@ -86,8 +86,8 @@ Authorization: Bearer YOUR_TOKEN_HERE
 **Body:**
 ```json
 {
-  "username": "admin",
-  "password": "admin123"
+  "username": "YOUR_USERNAME",
+  "password": "YOUR_PASSWORD"
 }
 ```
 
@@ -414,8 +414,8 @@ import requests
 
 # Вход
 response = requests.post('http://localhost:8000/api/login', json={
-    'username': 'admin',
-    'password': 'admin123'
+    'username': 'YOUR_USERNAME',
+    'password': 'YOUR_PASSWORD'
 })
 token = response.json()['access_token']
 
@@ -445,8 +445,8 @@ const loginResponse = await fetch('http://localhost:8000/api/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-        username: 'admin',
-        password: 'admin123'
+        username: 'YOUR_USERNAME',
+        password: 'YOUR_PASSWORD'
     })
 });
 const { access_token } = await loginResponse.json();

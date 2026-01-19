@@ -2,7 +2,7 @@
  * API клиент для взаимодействия с backend
  */
 
-const API_BASE_URL = 'http://127.0.0.1:8001/api';
+const API_BASE_URL = 'http://127.0.0.1:8000/api';
 
 class APIClient {
     constructor() {
@@ -144,6 +144,13 @@ class APIClient {
      */
     async getObject(id) {
         return await this.request(`/objects/${id}`);
+    }
+
+    /**
+     * Рассказ об объекте (ИИ-экскурсовод)
+     */
+    async getObjectStory(id) {
+        return await this.request(`/objects/${id}/story`);
     }
 
     /**

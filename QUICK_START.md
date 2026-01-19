@@ -86,7 +86,7 @@ python -m http.server 5500
 Затем откройте: **http://localhost:5500/login.html**
 
 **Логин:** `admin`  
-**Пароль:** `admin123`
+**Пароль:** `your_password`
 
 ---
 
@@ -169,7 +169,7 @@ curl http://localhost:8000/health
 
 ### Frontend
 
-Откройте http://localhost:5500/login.html и войдите с учетными данными `admin/admin123`
+Откройте http://localhost:5500/login.html и войдите в созданный вами аккаунт
 
 ---
 

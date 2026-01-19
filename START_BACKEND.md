@@ -109,7 +109,7 @@ pip install -r requirements.txt
    python -m http.server 5500
    ```
 3. Откройте браузер: http://localhost:5500/login.html
-4. Войдите: **admin** / **admin123**
+4. Войдите в созданный вами аккаунт (или зарегистрируйтесь через `/api/register`)
 
 ## Остановка сервера
 

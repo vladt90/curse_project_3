@@ -12,6 +12,7 @@ let markers = [];
 let currentRoute = null;
 let currentStart = null;
 let favoriteRouteIds = new Set();
+let storyCache = new Map();
 
 /**
  * Инициализация карты
@@ -110,6 +111,7 @@ async function buildRoute() {
 
     // Показываем загрузку
     showLoading(true);
+    currentRoute = null;
     clearRoute();
 
     try {
@@ -162,7 +164,7 @@ async function displayRoute(route) {
                     <b>${index + 1}. ${obj.name}</b><br>
                     <small>${obj.address}</small><br>
                     ${obj.object_type ? `<span style="color: #3498db;">${obj.object_type}</span><br>` : ''}
-                    ${item.distance_from_previous ? `<span style="color: #e74c3c;">📍 ${formatDistance(item.distance_from_previous)}</span>` : ''}
+                    ${item.distance_from_previous ? `<span style="color: #e74c3c;">• ${formatDistance(item.distance_from_previous)}</span>` : ''}
                 </div>
             `
         }, {
@@ -222,6 +224,16 @@ function displayRouteInfo(route) {
     resultsDiv.innerHTML = html;
     resultsDiv.classList.remove('hidden');
 
+    // Клики по карточкам объектов (вместо inline onclick, чтобы работало надежно)
+    resultsDiv.querySelectorAll('.object-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const idx = Number(card.getAttribute('data-index'));
+            if (Number.isFinite(idx)) {
+                focusOnObject(idx);
+            }
+        });
+    });
+
     const favoriteButton = document.getElementById('toggle-favorite-btn');
     if (favoriteButton && routeId) {
         favoriteButton.addEventListener('click', async () => {
@@ -244,14 +256,26 @@ function displayRouteInfo(route) {
 function renderObjectCard(item, index) {
     const obj = item.object;
 
+    const iconPin = `
+        <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/>
+        </svg>
+    `;
+
+    const iconDistrict = `
+        <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M12 3l9 7v11a1 1 0 0 1-1 1h-5v-7H10v7H5a1 1 0 0 1-1-1V10l8-7Zm0 2.6L6 10v10h2v-7a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v7h2V10l-6-4.4Z"/>
+        </svg>
+    `;
+
     return `
-        <div class="object-card" data-index="${index}" onclick="focusOnObject(${index})">
+        <div class="object-card" data-index="${index}">
             <div class="object-card-header">
                 <div class="object-number">${index + 1}</div>
                 <div class="object-info">
                     <div class="object-name">${obj.name}</div>
-                    <div class="object-address">📍 ${obj.address}</div>
-                    ${obj.district ? `<div class="object-address">🏘️ ${obj.district}</div>` : ''}
+                    <div class="object-address"><span class="ui-icon-wrap">${iconPin}</span>${obj.address}</div>
+                    ${obj.district ? `<div class="object-address"><span class="ui-icon-wrap">${iconDistrict}</span>${obj.district}</div>` : ''}
                     ${obj.object_type ? `<span class="object-type">${obj.object_type}</span>` : ''}
                     ${item.distance_from_previous ? `<div class="object-distance">📏 ${formatDistance(item.distance_from_previous)} от предыдущей точки</div>` : ''}
                     ${obj.description ? `<div style="margin-top: 0.5rem; color: #666; font-size: 0.9rem;">${obj.description}</div>` : ''}
@@ -270,6 +294,45 @@ function focusOnObject(index) {
     const obj = currentRoute.objects[index].object;
     map.setCenter([obj.latitude, obj.longitude], 16);
     highlightObject(index);
+    openAiStoryModal(obj);
+}
+
+async function openAiStoryModal(obj) {
+    if (!obj?.id) return;
+
+    const modal = document.getElementById('ai-modal');
+    const backdrop = document.getElementById('ai-modal-backdrop');
+    const closeBtn = document.getElementById('ai-modal-close');
+    const title = document.getElementById('ai-modal-title');
+    const body = document.getElementById('ai-modal-body');
+    if (!modal || !backdrop || !closeBtn || !title || !body) return;
+
+    title.textContent = obj.name || 'Объект';
+    body.textContent = 'Готовлю рассказ…';
+    modal.classList.remove('hidden');
+    modal.setAttribute('aria-hidden', 'false');
+
+    const close = () => {
+        modal.classList.add('hidden');
+        modal.setAttribute('aria-hidden', 'true');
+    };
+
+    backdrop.onclick = close;
+    closeBtn.onclick = close;
+
+    if (storyCache.has(obj.id)) {
+        body.textContent = storyCache.get(obj.id);
+        return;
+    }
+
+    try {
+        const data = await api.getObjectStory(obj.id);
+        const story = data?.story || 'Не удалось получить рассказ.';
+        storyCache.set(obj.id, story);
+        body.textContent = story;
+    } catch (error) {
+        body.textContent = error.message || 'Не удалось получить рассказ.';
+    }
 }
 
 /**
@@ -301,7 +364,6 @@ function clearRoute() {
     markers = [];
 
     document.getElementById('route-results').classList.add('hidden');
-    currentRoute = null;
 }
 
 function drawStraightRoute(routeCoords) {
@@ -355,7 +417,7 @@ function showLoading(show) {
 /**
  * Инициализация страницы
  */
-document.addEventListener('DOMContentLoaded', () => {
+function onPageReady() {
     // Проверка авторизации
     if (!api.isAuthenticated()) {
         window.location.href = 'login.html';
@@ -381,6 +443,23 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('logout-btn').addEventListener('click', () => {
         api.logout();
     });
+}
+
+// map.js может быть подгружен динамически после ymaps, когда DOMContentLoaded уже сработал
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', onPageReady);
+} else {
+    onPageReady();
+}
+
+// Делегирование кликов по карточкам объектов (надежнее, чем навешивать после рендера)
+document.addEventListener('click', (event) => {
+    const card = event.target?.closest?.('.object-card');
+    if (!card) return;
+    const idx = Number(card.getAttribute('data-index'));
+    if (Number.isFinite(idx)) {
+        focusOnObject(idx);
+    }
 });
 
 /**
@@ -466,6 +545,7 @@ function renderRouteHistory(routes) {
 async function openSavedRoute(routeId) {
     if (!routeId) return;
     showLoading(true);
+    currentRoute = null;
     clearRoute();
 
     try {

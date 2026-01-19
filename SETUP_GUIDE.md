@@ -180,9 +180,7 @@ python -m http.server 5500
 ### 1. Тест авторизации
 
 1. Откройте `http://localhost:5500/login.html`
-2. Войдите с тестовыми данными:
-   - **Логин:** `admin`
-   - **Пароль:** `admin123`
+2. Войдите в созданный вами аккаунт (или зарегистрируйтесь)
 3. Должно произойти перенаправление на главную страницу
 
 ### 2. Тест построения маршрута
@@ -202,8 +200,8 @@ python -m http.server 5500
 **POST /api/login**
 ```json
 {
-  "username": "admin",
-  "password": "admin123"
+  "username": "YOUR_USERNAME",
+  "password": "YOUR_PASSWORD"
 }
 ```
 
@@ -288,5 +286,5 @@ python import_data.py
 - [ ] Python зависимости установлены (`pip install -r requirements.txt`)
 - [ ] Backend запущен на порту 8000
 - [ ] Frontend открыт через Live Server или HTTP сервер
-- [ ] Авторизация работает (admin/admin123)
+- [ ] Авторизация работает (вход в свой аккаунт)
 

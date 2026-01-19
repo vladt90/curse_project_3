@@ -3,6 +3,7 @@
 """
 from pydantic_settings import BaseSettings
 from typing import Optional
+from pathlib import Path
 
 
 class Settings(BaseSettings):
@@ -16,7 +17,8 @@ class Settings(BaseSettings):
     DB_PORT: int = 3306
     
     # JWT
-    SECRET_KEY: str = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
+
+    SECRET_KEY: str = "CHANGE_ME"
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 1440  # 24 hours
     
@@ -25,10 +27,15 @@ class Settings(BaseSettings):
     APP_VERSION: str = "1.0.0"
     DEBUG: bool = True
     APP_HOST: str = "0.0.0.0"
-    APP_PORT: int = 8001
+    APP_PORT: int = 8000
 
     # Yandex
-    YANDEX_GEOCODER_API_KEY: str = "fd1a272a-0331-44ed-8ffb-693497615815"
+    YANDEX_GEOCODER_API_KEY: str = ""
+
+    # LLM (OpenRouter)
+    OPENROUTER_API_KEY: str = ""
+    OPENROUTER_MODEL: str = "google/gemma-3n-e2b-it:free"
+    OPENROUTER_BASE_URL: str = "https://openrouter.ai/api/v1"
     
     # Route settings
     MAX_ROUTE_OBJECTS: int = 20  # Максимальное количество объектов в маршруте
@@ -36,7 +43,9 @@ class Settings(BaseSettings):
     MAX_SEARCH_RADIUS_KM: int = 5  # Максимальный радиус поиска объектов (км)
     
     class Config:
-        env_file = ".env"
+        # Всегда читаем .env рядом с этим файлом (backend/.env),
+        # независимо от того, из какой директории запускают приложение.
+        env_file = str(Path(__file__).resolve().parent / ".env")
         case_sensitive = True
 
 

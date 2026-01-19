@@ -1,11 +1,13 @@
 """
 API эндпоинты для работы с объектами культурного наследия
 """
-from fastapi import APIRouter, HTTPException, status, Query
+from fastapi import APIRouter, HTTPException, status, Query, Depends
 from typing import Optional
 from models import HeritageObject, HeritageObjectList
 from database import get_db_cursor
 from mysql.connector import Error
+from routes.auth import get_current_user
+from services.story_service import get_story_for_object
 
 
 router = APIRouter(prefix="/api", tags=["objects"])
@@ -156,6 +158,23 @@ async def get_object_by_id(object_id: int):
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="Ошибка получения данных"
         )
+
+
+@router.get("/objects/{object_id}/story")
+async def get_object_story(
+    object_id: int,
+    current_user: dict = Depends(get_current_user),
+):
+    """
+    Получить рассказ (ИИ-экскурсовод) об объекте. Результат кэшируется в БД.
+    """
+    story = get_story_for_object(object_id)
+    if not story:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Объект не найден"
+        )
+    return {"story": story}
 
 
 @router.get("/districts")

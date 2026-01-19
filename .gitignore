@@ -44,6 +44,9 @@ env/
 .env
 *.env
 
+# Frontend local config (НЕ коммитить)
+frontend/js/config.js
+
 # Logs
 *.log
 logs/

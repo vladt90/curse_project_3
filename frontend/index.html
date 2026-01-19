@@ -33,7 +33,11 @@
                 <h2>Построение маршрута</h2>
                 
                 <div class="form-group">
-                    <label>📍 Точка старта</label>
+                    <label><span class="ui-icon-wrap" aria-hidden="true">
+                        <svg class="ui-icon" viewBox="0 0 24 24" focusable="false">
+                            <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/>
+                        </svg>
+                    </span>Точка старта</label>
                     <small>Кликните на карте или введите координаты</small>
                 </div>
 
@@ -113,12 +117,68 @@
         </div>
     </div>
 
-    <!-- Yandex Maps JS API -->
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=fd1a272a-0331-44ed-8ffb-693497615815&lang=ru_RU"></script>
+    <!-- AI Guide Modal -->
+    <div id="ai-modal" class="modal hidden" aria-hidden="true">
+        <div class="modal-backdrop" id="ai-modal-backdrop"></div>
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="ai-modal-title">
+            <div class="modal-header">
+                <div>
+                    <div class="modal-kicker">ИИ‑экскурсовод</div>
+                    <h3 id="ai-modal-title" class="modal-title"></h3>
+                </div>
+                <button class="modal-close" id="ai-modal-close" aria-label="Закрыть">✕</button>
+            </div>
+            <div id="ai-modal-body" class="modal-body"></div>
+        </div>
+    </div>
 
-    <!-- Custom JS -->
+    <!-- Frontend local config (НЕ коммитить). Создайте из js/config.example.js -->
+    <script src="js/config.js"></script>
+
+    <!-- Custom JS (API клиент не зависит от карты) -->
     <script src="js/api.js"></script>
-    <script src="js/map.js"></script>
+
+    <!-- Yandex Maps JS API (ключ берём из js/config.js), затем подгружаем map.js -->
+    <script>
+        (function () {
+            const messageDiv = document.getElementById('message');
+            const key = window.APP_CONFIG && window.APP_CONFIG.YANDEX_MAPS_API_KEY;
+
+            if (!key) {
+                const text = 'Не задан ключ Yandex Maps. Создайте js/config.js (см. js/config.example.js).';
+                console.error(text);
+                if (messageDiv) {
+                    messageDiv.className = 'message message-error';
+                    messageDiv.textContent = text;
+                    messageDiv.classList.remove('hidden');
+                }
+                return;
+            }
+
+            const yandex = document.createElement('script');
+            yandex.src = 'https://api-maps.yandex.ru/2.1/?apikey=' + encodeURIComponent(key) + '&lang=ru_RU';
+            yandex.async = true;
+
+            yandex.onload = function () {
+                const mapScript = document.createElement('script');
+                mapScript.src = 'js/map.js';
+                mapScript.defer = true;
+                document.body.appendChild(mapScript);
+            };
+
+            yandex.onerror = function () {
+                const text = 'Не удалось загрузить Яндекс.Карты. Проверьте ключ и интернет-доступ.';
+                console.error(text);
+                if (messageDiv) {
+                    messageDiv.className = 'message message-error';
+                    messageDiv.textContent = text;
+                    messageDiv.classList.remove('hidden');
+                }
+            };
+
+            document.head.appendChild(yandex);
+        })();
+    </script>
 </body>
 </html>
 
